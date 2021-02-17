@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'/>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js" integrity="sha512-zT3zHcFYbQwjHdKjCu6OMmETx8fJA9S7E6W7kBeFxultf75OPTYUJigEKX58qgyQMi1m1EgenfjMXlRZG8BXaw==" crossorigin="anonymous"></script>
+    
+    <script src="action.js"></script>
+    
+    
+    
+</head>
+<body>
+
+<div id="panel">
+        <div class="head">
+            <h2>TODOLIST</h2>
+            <label for="menu_control" class="menu_btn">
+                <span>選單</span>
+            </label>
+        </div>
+
+        <div id="todolist">
+            <ul>
+                <li class='complete'>
+                <div class="checkbox"></div>
+                <div class="content">MILK</div>
+                <div class="actions">
+                    <div class="delet"><i class="fas fa-trash-alt"></i></div>
+                </div>
+                </li>
+
+                <li>
+                <div class="checkbox"></div>
+                <div class="content">COFFEE</div>
+                <div class="actions">
+                    <div class="delet"><i class="fas fa-trash-alt"></i></div>
+                </div>
+                </li>
+
+                <li>
+                <div class="checkbox"></div>
+                <div class="content">SODA</div>
+                <div class="actions">
+                    <div class="delet"><i class="fas fa-trash-alt"></i></div>
+                </div>
+                </li>
+
+                <li class="new">
+                <div class="checkbox"></div>
+                <div class="content" contenteditable='true'></div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <script id='todolist-item-template' type='text/x-handlebars-template'>
+        <li class='{{#if is_complete}}complete{{/if}}'>
+            <div class="checkbox"></div>
+            <div class="content">{{content}}</div>
+            <div class="actions">
+                <div class="delet"><i class="fas fa-trash-alt"></i></div>
+            </div>
+        </li>
+    </script>
+  
+ </body>
+ </html>
